@@ -53,10 +53,9 @@ namespace Aircompany
             List<MilitaryPlane> militaryPlanes = GetMilitaryPlanes();
             for (int i = 0; i < militaryPlanes.Count; i++)
             {
-                MilitaryPlane plane = militaryPlanes[i];
-                if (plane.PlaneTypeIs() == MilitaryType.TRANSPORT)
+                if (militaryPlanes[i].PlaneTypeIs() == MilitaryType.TRANSPORT)
                 {
-                    transportMilitaryPlanes.Add(plane);
+                    transportMilitaryPlanes.Add(militaryPlanes[i]);
                 }
             }
 
