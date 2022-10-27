@@ -10,9 +10,9 @@ namespace Aircompany
     {
         public List<Plane> Planes;
 
-        public Airport(IEnumerable<Plane> planes)
+        public Airport(IEnumerable<Plane> _planes)
         {
-            Planes = planes.ToList();
+            Planes = _planes.ToList();
         }
 
         public List<PassengerPlane> GetPassengersPlanes()
@@ -86,7 +86,7 @@ namespace Aircompany
         public override string ToString()
         {
             return "Airport{" +
-                    "planes=" + string.Join(", ", Planes.Select(x => x.GetModel())) +
+                    "_planes=" + string.Join(", ", Planes.Select(x => x.GetModel())) +
                     '}';
         }
     }
