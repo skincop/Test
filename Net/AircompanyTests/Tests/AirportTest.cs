@@ -50,7 +50,7 @@ namespace AircompanyTests.Tests
         {
             Airport airport = new Airport(_planes);
             PassengerPlane expectedPlaneWithMaxPassengersCapacity = airport.GetPassengerPlaneWithMaxPassengersCapacity();
-            Assert.IsEqual(expectedPlaneWithMaxPassengersCapacity, _planeWithMaxPassengerCapacity);
+            Assert.Equals(expectedPlaneWithMaxPassengersCapacity, _planeWithMaxPassengerCapacity);
 
         }
 
@@ -64,7 +64,7 @@ namespace AircompanyTests.Tests
             bool nextPlaneMaxLoadCapacityIsHigherThanCurrent = true;
             for (int i = 0; i < planesSortedByMaxLoadCapacity.Count - 1; i++)
             {
-                if (planesSortedByMaxLoadCapacity[i];.MAXLoadCapacity() > planesSortedByMaxLoadCapacity.MAXLoadCapacity())
+                if (planesSortedByMaxLoadCapacity[i].MAXLoadCapacity() > planesSortedByMaxLoadCapacity[i+1].MAXLoadCapacity())
                 {
                     nextPlaneMaxLoadCapacityIsHigherThanCurrent = false;
                 }
